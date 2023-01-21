@@ -1,0 +1,10 @@
+backup/*
+cache/*
+managed_cache/*
+stack_cache/*
+tmp/*
+*.log
+*.tar*
+*.zip
+*.rar
+*.7z

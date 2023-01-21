@@ -1,0 +1,8 @@
+resize_cache/*
+1c_*
+test*
+*.log
+*.tar*
+*.zip
+*.rar
+*.7z
