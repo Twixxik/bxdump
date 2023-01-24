@@ -37,7 +37,7 @@ $vars = implode(PHP_EOL, [
 	'set database=' . '"' . $database . '"',
 ]);
 
-$mysqldump = 'mysqldump -h$host -P$port -u$login -p$password $database'
+$mysqldump = 'mysqldump -h$host -P$port -u$login -p$password $database';
 
 $commands = [
 	$vars,
