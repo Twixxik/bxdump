@@ -29,15 +29,15 @@ if (!$port) {
 	$port = 3306;
 }
 
-$vars = implode(PHP_EOL, [
-	'set host=' . '"' . $host . '"',
-	'set port=' . '"' . $port . '"',
-	'set login=' . '"' . $login . '"',
-	'set password=' . '"' . $password . '"',
-	'set database=' . '"' . $database . '"',
+$vars = implode(" && ", [
+	'BXDUMPHOST=' . '"' . $host . '"',
+	'BXDUMPPORT=' . '"' . $port . '"',
+	'BXDUMPLOGIN=' . '"' . $login . '"',
+	'BXDUMPPASSWROD=' . '"' . $password . '"',
+	'BXDUMPDATABASE=' . '"' . $database . '"',
 ]);
 
-$mysqldump = 'mysqldump -h$host -P$port -u$login -p$password $database';
+$mysqldump = 'mysqldump -h $BXDUMPHOST -P $BXDUMPPORT -u $BXDUMPLOGIN -p$BXDUMPPASSWROD $BXDUMPDATABASE';
 
 $commands = [
 	$vars,
