@@ -37,10 +37,9 @@ $vars = implode(" && ", [
 	'BXDUMPDATABASE=' . '"' . $database . '"',
 ]);
 
-$mysqldump = 'mysqldump -h $BXDUMPHOST -P $BXDUMPPORT -u $BXDUMPLOGIN -p$BXDUMPPASSWROD $BXDUMPDATABASE';
+$mysqldump = $vars . ' && mysqldump -h $BXDUMPHOST -P $BXDUMPPORT -u $BXDUMPLOGIN -p$BXDUMPPASSWROD $BXDUMPDATABASE';
 
 $commands = [
-	$vars,
 	$mysqldump . ' --no-tablespaces --no-data --routines --events > ' . __DIR__ . '/10-structure.sql',
 	implode(' ', [
 		$mysqldump,
