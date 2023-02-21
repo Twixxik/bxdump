@@ -1,2 +1,2 @@
-resize_cache/*
-tmp/*
+./resize_cache/*
+./tmp/*
