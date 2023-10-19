@@ -1,2 +1,2 @@
-./resize_cache/*
-./tmp/*
+upload/resize_cache/*
+upload/tmp/*

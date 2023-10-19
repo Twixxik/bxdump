@@ -47,6 +47,7 @@ $commands = [
 		'--no-create-info',
 		'--ignore-table=' . $database . '.b_event',
 		'--ignore-table=' . $database . '.b_event_log',
+		'--ignore-table=' . $database . '.b_messageservice_message',
 		'--ignore-table=' . $database . '.b_im_message',
 		'--ignore-table=' . $database . '.b_im_message_param',
 		'--ignore-table=' . $database . '.b_im_message_favorite',
@@ -61,7 +62,7 @@ $commands = [
 		'--ignore-table=' . $database . '.b_perf_sql',
 		'> ' . __DIR__ . '/20-data.sql',
 	]),
-	'tar -czf ' . __DIR__ . '/bxdump-db.tar.gz ' . __DIR__ . '/10-structure.sql ' . __DIR__ . '/20-data.sql'
+	'cd ' . __DIR__ . ' && tar -czf ./bxdump-db.tar.gz ./10-structure.sql ./20-data.sql'
 ];
 
 foreach ($commands as $command) {
